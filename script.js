@@ -9,7 +9,9 @@ function addTodo() {
     const list = document.getElementById("list");
     const li = document.createElement("li");
     const text = document.createTextNode(todo);
-    li.appendChild(text);
+    
+    li.setAttribute("onclick", "this.remove()");
 
+    li.appendChild(text);
     list.appendChild(li);
 }
