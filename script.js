@@ -1,5 +1,7 @@
 function addTodo() {
-    const todo = document.getElementById('new-todo').value;
+    const todoElement = document.getElementById('new-todo'); // Access new-todo element
+    const todo = todoElement.value; // Get and store the value
+    todoElement.value = ""; // Clear the input field
     if (todo.length < 3) {
         return alert("You must have at least 3 characters for your to do item")
     }
